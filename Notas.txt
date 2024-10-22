@@ -1,0 +1,21 @@
+
+Instalación de la versión de Font Awesome atraves de NPM
+	npm init -y
+	npm install --save @fortawesome/fontawesome-free
+Cargar Fuentes de Font Awesome
+	CTRL + Shift + P
+	Google Fonts: Insert CSS @import
+		Fuente: Poppins
+		Fuente: Merienda
+Instalar SASS en el proyecto 
+    npm init -y
+    npm install -g sass
+Ejecutar codigo SASS
+    sass [Carpeta_origen]:[Carpeta_destino]
+    Ejemplo:
+        sass scss:css
+Ejecutar codigo SASS Permanentemente
+    sass --watch [Carpeta_origen]:[Carpeta_destino]
+    Ejemplo:
+        sass --watch scss:css 
+	

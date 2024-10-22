@@ -1,0 +1,75 @@
+// MEDIA QUERY
+$desktop: 1100px;
+$tablets: 790px;
+$phone: 550px;
+
+@mixin desktop {
+     @media screen and (max-width: $desktop) { 
+          @content;  //se usa dentro de un mixin para insertar contenido que se pasa cuando se incluye el mixin
+     }
+}
+
+@mixin tablets {
+     @media screen and (max-width: $tablets) { 
+          @content;
+     }
+}
+
+@mixin phone {
+     @media screen and (max-width: $phone) { 
+          @content;
+     }
+}
+
+
+
+// DESKTOP
+@include desktop(){
+     // ABOUT
+     .about{
+          &__container{
+               .content{
+                    order: 1;
+                    flex: 0 0 100% !important;
+                    margin: 50px 0;
+               }
+
+               .container_image{
+                    order: 0;
+                    flex: 0 0 100% !important;
+                    margin: 50px 0;
+               }
+          }
+     }
+
+     // ICONS
+     .icons{
+          width: 100% !important;
+     }
+}
+
+
+// TABLETS
+@include tablets(){
+     // CARD
+     .card{
+          width: 45% !important;
+     }
+}
+
+
+// PHONE
+@include phone(){
+     // CARD
+     .card{
+          width: 100% !important;
+     }
+
+
+     // FOOTER
+     .footer{
+          &__container{
+               grid-template-columns: 1fr !important;
+          }
+     }
+}
